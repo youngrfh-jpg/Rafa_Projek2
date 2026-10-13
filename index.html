@@ -5,141 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeCraft Academy - Galeri & Pendaftaran</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #111111; color: #f3f4f6; }
+        body { font-family: 'Quicksand', sans-serif; background-color: #fdf2f8; color: #4a5568; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100">
 
-    <!-- Top Navigation Minimalis -->
-    <header class="border-b border-neutral-800 bg-[#111111]/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Top Navigation Cute -->
+    <header class="border-b border-pink-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-auto sm:h-20 py-3 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-3">
             <a href="index.html" class="flex items-center space-x-3 group cursor-pointer">
-                <span class="bg-amber-500 group-hover:bg-amber-400 text-black font-extrabold px-3 py-1.5 rounded-lg text-lg transition">{ }</span>
-                <span class="text-xl font-black tracking-wider text-white uppercase">CODECRAFT <span class="text-amber-500 text-xs tracking-normal block font-semibold">Academy</span></span>
+                <span class="bg-pink-400 group-hover:bg-pink-300 text-white font-extrabold px-3 py-1.5 rounded-2xl text-lg transition shadow-md">{ }</span>
+                <span class="text-xl font-black tracking-wider text-pink-600 uppercase">CODECRAFT <span class="text-purple-400 text-xs tracking-normal block font-semibold">Academy </span></span>
             </a>
-            <nav class="flex items-center space-x-2 bg-neutral-900 p-1.5 rounded-2xl border border-neutral-800">
-                <a href="index.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-black bg-amber-500 rounded-xl transition shadow-md cursor-pointer">
-                    🖼️ Galeri Kegiatan
+            <nav class="flex items-center space-x-2 bg-pink-50 p-1.5 rounded-full border border-pink-200">
+                <a href="index.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-white bg-pink-400 rounded-full transition shadow-md cursor-pointer">
+                  Galeri Kegiatan
                 </a>
-                <a href="pendaftaran.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-xl transition cursor-pointer">
-                    📝 Form Pendaftaran
+                <a href="pendaftaran.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-pink-500 hover:text-pink-600 hover:bg-pink-100/50 rounded-full transition cursor-pointer">
+                    Form Pendaftaran
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-12 pb-20 border-b border-neutral-800/80 bg-gradient-to-b from-[#161616] to-[#111111]">
+    <!-- Hero Section Cute -->
+    <section class="relative overflow-hidden pt-12 pb-20">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-xs font-bold mb-6">
-                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 bg-white/80 border border-pink-300 rounded-full text-pink-500 text-xs font-bold mb-6 shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-pink-400 animate-pulse"></span>
                 <span>Penerimaan Anggota Baru Gelombang 2026</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+            <h1 class="text-3xl sm:text-6xl font-black text-pink-600 tracking-tight leading-tight mb-6">
                 Transformasi Karier Anda Menjadi <br>
-                <span class="text-amber-500">Software Engineer Profesional</span>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Software Engineer Profesional 🌸</span>
             </h1>
 
-            <p class="text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
                 Jelajahi keseruan pelatihan intensif, praktik langsung bersama mentor industri, dan bangun portofolio kelas dunia bersama CodeCraft Coding Academy.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-                <a href="pendaftaran.html" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-black font-extrabold px-8 py-4 rounded-xl text-sm transition shadow-lg shadow-amber-500/20 cursor-pointer flex items-center justify-center space-x-2">
-                    <span>Daftar Sekarang</span>
+                <a href="pendaftaran.html" class="w-full sm:w-auto bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold px-8 py-4 rounded-full text-sm transition shadow-lg shadow-pink-300/50 cursor-pointer flex items-center justify-center space-x-2">
+                    <span>Daftar Sekarang </span>
                     <span>&rarr;</span>
                 </a>
-                <a href="#galeri-section" class="w-full sm:w-auto bg-neutral-900 hover:bg-neutral-800 text-white border border-neutral-700 font-bold px-8 py-4 rounded-xl text-sm transition cursor-pointer flex items-center justify-center space-x-2">
-                    <span>🖼️ Lihat Dokumentasi</span>
+                <a href="#galeri-section" class="w-full sm:w-auto bg-white hover:bg-pink-50 text-pink-500 border border-pink-200 font-bold px-8 py-4 rounded-full text-sm transition shadow-sm cursor-pointer flex items-center justify-center space-x-2">
+                    <span>Lihat Dokumentasi</span>
                 </a>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-neutral-400 font-medium">
-                <span class="text-neutral-500 font-bold mr-2">TECH STACK:</span>
-                <span class="px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-white">🐍 Python</span>
-                <span class="px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-white">☕ Java</span>
-                <span class="px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-white">&lt;/&gt; C++</span>
-                <span class="px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-white">⚡ JavaScript</span>
-                <span class="px-3.5 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-white">🗄️ SQL</span>
+            <!-- Tech Stack Badges Pastel -->
+            <div class="flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-gray-600 font-bold">
+                <span class="text-pink-400 font-bold mr-2 uppercase tracking-wider">TECH STACK:</span>
+                <span class="px-4 py-2 bg-white/90 border border-pink-200 rounded-2xl text-pink-500 shadow-sm">Python</span>
+                <span class="px-4 py-2 bg-white/90 border border-purple-200 rounded-2xl text-purple-500 shadow-sm">Java</span>
+                <span class="px-4 py-2 bg-white/90 border border-indigo-200 rounded-2xl text-indigo-500 shadow-sm">C++</span>
+                <span class="px-4 py-2 bg-white/90 border border-amber-200 rounded-2xl text-amber-500 shadow-sm">JavaScript</span>
+                <span class="px-4 py-2 bg-white/90 border border-emerald-200 rounded-2xl text-emerald-500 shadow-sm">SQL</span>
             </div>
+
         </div>
     </section>
 
     <!-- Main Content: Galeri -->
-    <main id="galeri-section" class="max-w-7xl mx-auto px-6 py-16 flex-grow w-full">
+    <main id="galeri-section" class="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <!-- Header Galeri -->
+        <div class="flex flex-col gap-6 mb-12 bg-white/70 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-pink-200 shadow-sm">
             <div>
-                <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Galeri & Dokumentasi Kegiatan</h2>
-                <p class="text-neutral-400 text-sm">Dokumentasi suasana kelas, praktikum lab, dan kolaborasi siswa di CodeCraft.</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-pink-600 tracking-tight mb-1">Galeri & Dokumentasi Kegiatan</h2>
+                <p class="text-gray-500 text-xs sm:text-sm font-medium">Dokumentasi suasana kelas, praktikum lab, dan kolaborasi siswa di CodeCraft.</p>
             </div>
             
             <!-- Tombol Filter Kategori -->
-            <div class="flex flex-wrap gap-2">
-                <button onclick="filterGaleri('semua')" id="btn-semua" class="px-4 py-2 text-xs font-bold bg-amber-500 text-black rounded-xl transition cursor-pointer shadow-md">Semua</button>
-                <button onclick="filterGaleri('web')" id="btn-web" class="px-4 py-2 text-xs font-bold bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white rounded-xl transition cursor-pointer">Web Dev</button>
-                <button onclick="filterGaleri('data')" id="btn-data" class="px-4 py-2 text-xs font-bold bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white rounded-xl transition cursor-pointer">Data Science</button>
-                <button onclick="filterGaleri('java')" id="btn-java" class="px-4 py-2 text-xs font-bold bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white rounded-xl transition cursor-pointer">Java & OOP</button>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-pink-100">
+                <button onclick="filterGaleri('semua')" id="btn-semua" class="px-4 py-2.5 text-xs font-bold bg-pink-400 text-white rounded-full transition cursor-pointer shadow-md">Semua</button>
+                <button onclick="filterGaleri('web')" id="btn-web" class="px-4 py-2.5 text-xs font-bold bg-white border border-pink-200 text-pink-500 hover:bg-pink-50 rounded-full transition cursor-pointer">Web Dev</button>
+                <button onclick="filterGaleri('data')" id="btn-data" class="px-4 py-2.5 text-xs font-bold bg-white border border-pink-200 text-pink-500 hover:bg-pink-50 rounded-full transition cursor-pointer">Data Science</button>
+                <button onclick="filterGaleri('java')" id="btn-java" class="px-4 py-2.5 text-xs font-bold bg-white border border-pink-200 text-pink-500 hover:bg-pink-50 rounded-full transition cursor-pointer">Java & OOP</button>
             </div>
         </div>
 
-        <!-- Grid Multi-Card Dokumentasi -->
-        <div id="galeri-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Grid Cards Galeri (Tersusun ke Bawah) -->
+        <div id="galeri-grid" class="flex flex-col gap-8">
             
-            <!-- Card 1: Web Dev -->
-            <div class="galeri-card bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden shadow-xl hover:border-amber-500/50 transition duration-300 flex flex-col justify-between" data-category="web">
-                <div>
-                    <div class="relative h-52 overflow-hidden bg-neutral-950">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Dev" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-amber-500 text-black text-xs font-black px-3 py-1 rounded-lg shadow-md">Full-Stack Web</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Pengembangan Web Full-Stack</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed">Membangun aplikasi web modern dari Front-End Tailwind hingga Back-End Node.js & SQL.</p>
-                    </div>
+            <!-- Card 1 -->
+            <div class="galeri-card bg-white border border-pink-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="web">
+                <div class="relative h-52 sm:h-64 overflow-hidden bg-pink-50">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Web Dev" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-pink-400 text-white text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md">Full-Stack Web</span>
                 </div>
-                <div class="px-6 pb-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-neutral-400">
-                    <span class="flex items-center gap-1">⏱️ 3 Bulan</span>
-                    <span class="flex items-center gap-1 text-amber-500 font-bold">👥 25 Peserta</span>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pengembangan Web Full-Stack</h3>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Membangun aplikasi web modern dari Front-End Tailwind hingga Back-End Node.js & SQL.</p>
+                </div>
+                <div class="px-6 sm:px-8 pb-6 pt-4 border-t border-pink-100 flex items-center justify-between text-xs sm:text-sm text-gray-500 font-semibold">
+                    <span>Durasi: 3 Bulan</span>
+                    <span class="text-pink-500 font-bold">25 Peserta</span>
                 </div>
             </div>
 
-            <!-- Card 2: Python / Data Science -->
-            <div class="galeri-card bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden shadow-xl hover:border-amber-500/50 transition duration-300 flex flex-col justify-between" data-category="data">
-                <div>
-                    <div class="relative h-52 overflow-hidden bg-neutral-950">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Python Dasar" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-teal-500 text-black text-xs font-black px-3 py-1 rounded-lg shadow-md">Python Dasar</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Pelatihan Python Dasar untuk Pemula</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed">Kelas ramah pemula yang mengenalkan logika pemrograman, sintaks bersih Python, hingga pembuatan proyek mini.</p>
-                    </div>
+            <!-- Card 2 -->
+            <div class="galeri-card bg-white border border-pink-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="data">
+                <div class="relative h-52 sm:h-64 overflow-hidden bg-pink-50">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Python Dasar" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-purple-400 text-white text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md">Python Dasar</span>
                 </div>
-                <div class="px-6 pb-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-neutral-400">
-                    <span class="flex items-center gap-1">⏱️ 2 Bulan</span>
-                    <span class="flex items-center gap-1 text-amber-500 font-bold">👥 30 Peserta / Kelas</span>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pelatihan Python Dasar untuk Pemula</h3>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Kelas ramah pemula yang mengenalkan logika pemrograman, sintaks bersih Python, hingga pembuatan proyek mini.</p>
+                </div>
+                <div class="px-6 sm:px-8 pb-6 pt-4 border-t border-pink-100 flex items-center justify-between text-xs sm:text-sm text-gray-500 font-semibold">
+                    <span>Durasi: 2 Bulan</span>
+                    <span class="text-purple-500 font-bold">30 Peserta / Kelas</span>
                 </div>
             </div>
 
-            <!-- Card 3: Java & OOP -->
-            <div class="galeri-card bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden shadow-xl hover:border-amber-500/50 transition duration-300 flex flex-col justify-between" data-category="java">
-                <div>
-                    <div class="relative h-52 overflow-hidden bg-neutral-950">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Java OOP" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-4 left-4 bg-purple-500 text-black text-xs font-black px-3 py-1 rounded-lg shadow-md">Java & OOP</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-white mb-2">Pemrograman Java & Konsep OOP</h3>
-                        <p class="text-neutral-400 text-sm leading-relaxed">Memahami Object Oriented Programming mendalam serta struktur data tingkat lanjut untuk enterprise.</p>
-                    </div>
+            <!-- Card 3 -->
+            <div class="galeri-card bg-white border border-pink-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="java">
+                <div class="relative h-52 sm:h-64 overflow-hidden bg-pink-50">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80" alt="Java OOP" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-4 left-4 bg-indigo-400 text-white text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md">Java & OOP</span>
                 </div>
-                <div class="px-6 pb-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-neutral-400">
-                    <span class="flex items-center gap-1">⏱️ 2.5 Bulan</span>
-                    <span class="flex items-center gap-1 text-amber-500 font-bold">👥 22 Peserta</span>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pemrograman Java & Konsep OOP</h3>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Memahami Object Oriented Programming mendalam serta struktur data tingkat lanjut untuk enterprise.</p>
+                </div>
+                <div class="px-6 sm:px-8 pb-6 pt-4 border-t border-pink-100 flex items-center justify-between text-xs sm:text-sm text-gray-500 font-semibold">
+                    <span>Durasi: 2.5 Bulan</span>
+                    <span class="text-indigo-500 font-bold">22 Peserta</span>
                 </div>
             </div>
 
@@ -147,8 +145,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-neutral-800 bg-[#111111] py-8 text-center text-xs text-neutral-500 mt-12">
-        <p>&copy; 2026 CodeCraft Academy. Seluruh Hak Cipta Dilindungi.</p>
+    <footer class="border-t border-pink-200 bg-white/60 py-8 text-center text-xs text-pink-400 font-bold mt-12">
+        <p>&copy; 2026 CodeCraft Academy . All Rights Reserved.</p>
     </footer>
 
     <!-- Script Filter Kategori Galeri -->
@@ -158,14 +156,14 @@
             const buttons = document.querySelectorAll('button[id^="btn-"]');
 
             buttons.forEach(btn => {
-                btn.className = "px-4 py-2 text-xs font-bold bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white rounded-xl transition cursor-pointer";
+                btn.className = "px-4 py-2.5 text-xs font-bold bg-white border border-pink-200 text-pink-500 hover:bg-pink-50 rounded-full transition cursor-pointer";
             });
 
-            document.getElementById('btn-' + kategori).className = "px-4 py-2 text-xs font-bold bg-amber-500 text-black rounded-xl transition cursor-pointer shadow-md";
+            document.getElementById('btn-' + kategori).className = "px-4 py-2.5 text-xs font-bold bg-pink-400 text-white rounded-full transition cursor-pointer shadow-md";
 
             cards.forEach(card => {
                 if (kategori === 'semua' || card.getAttribute('data-category') === kategori) {
-                    card.style.display = "flex";
+                    card.style.display = "block";
                 } else {
                     card.style.display = "none";
                 }

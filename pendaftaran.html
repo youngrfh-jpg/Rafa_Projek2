@@ -3,225 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Kursus - DevCraft Coding Academy</title>
+    <title>Pendaftaran Kursus - CodeCraft Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #111111; color: #f3f4f6; }
+        body { font-family: 'Quicksand', sans-serif; background-color: #fdf2f8; color: #4a5568; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100">
 
-    <!-- Top Navigation Minimalis -->
-    <nav class="border-b border-neutral-800 bg-[#111111]/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="bg-amber-500 text-black font-extrabold px-3 py-1.5 rounded-lg text-lg">&lt;/&gt;</span>
-                <span class="text-xl font-black tracking-wider text-white uppercase">DEVCRAFT <span class="text-amber-500 text-xs tracking-normal block font-semibold">Academy</span></span>
-            </div>
-            <div class="flex items-center space-x-2 bg-neutral-900 p-1.5 rounded-2xl border border-neutral-800">
-                <a href="index.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-neutral-400 hover:text-white transition">
-                    🖼️ Galeri Kegiatan
+    <!-- Top Navigation Cute -->
+    <header class="border-b border-pink-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-auto sm:h-20 py-3 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <a href="index.html" class="flex items-center space-x-3 group cursor-pointer">
+                <span class="bg-pink-400 group-hover:bg-pink-300 text-white font-extrabold px-3 py-1.5 rounded-2xl text-lg transition shadow-md">{ }</span>
+                <span class="text-xl font-black tracking-wider text-pink-600 uppercase">CODECRAFT <span class="text-purple-400 text-xs tracking-normal block font-semibold">Academy </span></span>
+            </a>
+            <nav class="flex items-center space-x-2 bg-pink-50 p-1.5 rounded-full border border-pink-200">
+                <a href="index.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-pink-500 hover:text-pink-600 hover:bg-pink-100/50 rounded-full transition cursor-pointer">
+                    Galeri Kegiatan
                 </a>
-                <a href="pendaftaran.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-black bg-amber-500 rounded-xl transition shadow-md">
-                    📝 Form Pendaftaran
+                <a href="pendaftaran.html" class="px-5 py-2 text-xs sm:text-sm font-bold text-white bg-pink-400 rounded-full transition shadow-md cursor-pointer">
+                    Form Pendaftaran
                 </a>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Content: Split Layout (Kiri Info & Kanan Form) -->
-    <main class="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">
+    <!-- Main Content: Form Pendaftaran -->
+    <main class="max-w-3xl mx-auto px-6 py-12 flex-grow w-full">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            <!-- Kolom Kiri: Informasi & Petunjuk -->
-            <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-                <div class="bg-gradient-to-br from-neutral-900 to-amber-950/30 border border-neutral-800 p-8 rounded-3xl">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-widest block mb-2">Registrasi Peserta</span>
-                    <h1 class="text-3xl font-black text-white mb-4">Formulir Pendaftaran</h1>
-                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Silakan lengkapi data calon peserta di samping. Pastikan NIK dan nomor kontak yang Anda masukkan valid.</p>
-                    
-                    <div class="space-y-4 pt-4 border-t border-neutral-800/80 text-xs text-neutral-400">
-                        <div class="flex items-start space-x-3">
-                            <span class="text-amber-500">✔</span>
-                            <span>Verifikasi berkas dilakukan maksimal 1x24 jam.</span>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <span class="text-amber-500">✔</span>
-                            <span>Bisa memilih lebih dari 1 bahasa pemrograman.</span>
-                        </div>
+        <div class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-pink-600 tracking-tight mb-2">Formulir Pendaftaran Kursus </h1>
+            <p class="text-gray-500 text-sm font-medium">Silakan isi data diri Anda dengan benar untuk mendaftar ke program CodeCraft Academy.</p>
+        </div>
+
+        <!-- Card Form Cute -->
+        <div class="bg-white/80 backdrop-blur-md border border-pink-200 rounded-3xl p-6 sm:p-10 shadow-xl">
+            <form id="formPendaftaran" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                
+                <!-- NIK -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">NIK *</label>
+                    <input type="text" id="nik" required placeholder="Masukkan 16 digit NIK Anda" 
+                        class="w-full bg-pink-50/50 border border-pink-200 rounded-2xl px-4 py-3.5 text-gray-700 placeholder-pink-300 text-sm focus:outline-none focus:border-pink-400 focus:bg-white transition">
+                </div>
+
+                <!-- Nama Lengkap -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">Nama Lengkap *</label>
+                    <input type="text" id="nama" required placeholder="Nama Sesuai KTP" 
+                        class="w-full bg-pink-50/50 border border-pink-200 rounded-2xl px-4 py-3.5 text-gray-700 placeholder-pink-300 text-sm focus:outline-none focus:border-pink-400 focus:bg-white transition">
+                </div>
+
+                <!-- Jenis Kelamin -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">Jenis Kelamin *</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 bg-pink-50/50 border border-pink-200 p-3.5 rounded-2xl cursor-pointer hover:bg-white transition">
+                            <input type="radio" name="gender" value="Laki-laki" required class="accent-pink-400 h-4 w-4">
+                            <span class="text-sm font-semibold text-gray-700">Laki-laki</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-pink-50/50 border border-pink-200 p-3.5 rounded-2xl cursor-pointer hover:bg-white transition">
+                            <input type="radio" name="gender" value="Perempuan" required class="accent-pink-400 h-4 w-4">
+                            <span class="text-sm font-semibold text-gray-700">Perempuan</span>
+                        </label>
                     </div>
                 </div>
+
+                <!-- No. HP / WhatsApp -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">No. HP / WhatsApp *</label>
+                    <input type="tel" id="phone" required placeholder="08xxxxxxxxxx" 
+                        class="w-full bg-pink-50/50 border border-pink-200 rounded-2xl px-4 py-3.5 text-gray-700 placeholder-pink-300 text-sm focus:outline-none focus:border-pink-400 focus:bg-white transition">
+                </div>
+
+                <!-- Alamat -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">Alamat Domisili *</label>
+                    <textarea id="address" required rows="3" placeholder="Masukkan alamat lengkap Anda" 
+                        class="w-full bg-pink-50/50 border border-pink-200 rounded-2xl px-4 py-3.5 text-gray-700 placeholder-pink-300 text-sm focus:outline-none focus:border-pink-400 focus:bg-white transition"></textarea>
+                </div>
+
+                <!-- Program -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-pink-500 mb-2">Program / Bahasa yang Diminati *</label>
+                    <select id="program" required 
+                        class="w-full bg-pink-50/50 border border-pink-200 rounded-2xl px-4 py-3.5 text-gray-700 text-sm focus:outline-none focus:border-pink-400 focus:bg-white transition">
+                        <option value="" disabled selected>-- Pilih Program Kursus --</option>
+                        <option value="Full-Stack Web Development">Full-Stack Web Development</option>
+                        <option value="Python Dasar & Data Science">Python Dasar & Data Science</option>
+                        <option value="Java & Konsep OOP">Java & Konsep OOP</option>
+                    </select>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit" 
+                    class="w-full bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold py-4 rounded-2xl text-sm transition shadow-lg shadow-pink-300/50 cursor-pointer">
+                    Kirim Pendaftaran 
+                </button>
+            </form>
+        </div>
+
+        <!-- Output Result -->
+        <div id="resultCard" class="hidden mt-10 bg-white border border-pink-300 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <h3 class="text-xl font-extrabold text-pink-600 mb-4 flex items-center gap-2">
+                <span> </span> Pendaftaran Berhasil Disimpan!
+            </h3>
+            <div id="outputContent" class="space-y-3 text-sm text-gray-600 border-t border-pink-100 pt-4">
+                <!-- Data dimasukkan via JS -->
             </div>
-
-            <!-- Kolom Kanan: Form Pendaftaran -->
-            <div class="lg:col-span-8">
-                <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
-                    <form id="formPendaftaran" onsubmit="handleSimpan(event)" class="space-y-6">
-                        
-                        <!-- Row 1: NIK & Nama -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">NIK <span class="text-amber-500">*</span></label>
-                                <input type="text" id="nik" required maxlength="16" placeholder="16 digit NIK" 
-                                    class="w-full bg-[#111111] border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Nama Lengkap <span class="text-amber-500">*</span></label>
-                                <input type="text" id="nama" required placeholder="Nama Sesuai KTP" 
-                                    class="w-full bg-[#111111] border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition">
-                            </div>
-                        </div>
-
-                        <!-- Row 2: Jenis Kelamin & No HP -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Jenis Kelamin <span class="text-amber-500">*</span></label>
-                                <div class="flex gap-4">
-                                    <label class="flex-1 flex items-center justify-center gap-2 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                        <input type="radio" name="jeniskelamin" value="Laki-laki" required class="accent-amber-500">
-                                        <span class="text-xs font-bold text-white">Laki-laki</span>
-                                    </label>
-                                    <label class="flex-1 flex items-center justify-center gap-2 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                        <input type="radio" name="jeniskelamin" value="Perempuan" required class="accent-amber-500">
-                                        <span class="text-xs font-bold text-white">Perempuan</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">No. HP / WhatsApp <span class="text-amber-500">*</span></label>
-                                <input type="tel" id="nohp" required placeholder="08xxxxxxxxxx" 
-                                    class="w-full bg-[#111111] border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition">
-                            </div>
-                        </div>
-
-                        <!-- Bahasa Pemrograman -->
-                        <div>
-                            <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Bahasa Pemrograman Diminati <span class="text-amber-500">*</span></label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <label class="flex items-center space-x-3 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                    <input type="checkbox" name="bahasa" value="Python & AI" class="accent-amber-500 rounded">
-                                    <span class="text-xs font-semibold text-neutral-200">Python & AI</span>
-                                </label>
-                                <label class="flex items-center space-x-3 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                    <input type="checkbox" name="bahasa" value="Java & OOP" class="accent-amber-500 rounded">
-                                    <span class="text-xs font-semibold text-neutral-200">Java & OOP</span>
-                                </label>
-                                <label class="flex items-center space-x-3 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                    <input type="checkbox" name="bahasa" value="C++ Programming" class="accent-amber-500 rounded">
-                                    <span class="text-xs font-semibold text-neutral-200">C++ Programming</span>
-                                </label>
-                                <label class="flex items-center space-x-3 p-3 bg-[#111111] border border-neutral-800 rounded-xl cursor-pointer hover:border-amber-500/50 transition">
-                                    <input type="checkbox" name="bahasa" value="JavaScript / Full-Stack" class="accent-amber-500 rounded">
-                                    <span class="text-xs font-semibold text-neutral-200">JavaScript / Full-Stack</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Alamat -->
-                        <div>
-                            <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">Alamat Lengkap <span class="text-amber-500">*</span></label>
-                            <textarea id="alamat" required rows="3" placeholder="Alamat domisili lengkap..." 
-                                class="w-full bg-[#111111] border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-500 transition"></textarea>
-                        </div>
-
-                        <!-- Tombol -->
-                        <div class="flex gap-4 pt-2">
-                            <button type="reset" class="w-1/3 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition">
-                                Reset
-                            </button>
-                            <button type="submit" class="w-2/3 bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-3 rounded-xl text-xs uppercase tracking-wider transition">
-                                Simpan Data 🚀
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Card Hasil Output Pendaftaran -->
-                <div id="hasilPendaftaran" class="hidden mt-8 bg-neutral-900 border border-amber-500/50 rounded-3xl p-6 sm:p-8 shadow-2xl">
-                    <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-neutral-800">
-                        <span class="bg-amber-500 text-black font-bold p-2 rounded-lg text-sm">✅</span>
-                        <div>
-                            <h2 class="text-lg font-black text-white">Hasil Pendaftaran Registered</h2>
-                            <p class="text-xs text-amber-500">Data berikut telah tersimpan secara resmi.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">NIK</span>
-                            <span id="resNik" class="font-bold text-white"></span>
-                        </div>
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">Nama Lengkap</span>
-                            <span id="resNama" class="font-bold text-white"></span>
-                        </div>
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">Jenis Kelamin</span>
-                            <span id="resGender" class="font-bold text-white"></span>
-                        </div>
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">No. HP</span>
-                            <span id="resHp" class="font-bold text-white"></span>
-                        </div>
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800 sm:col-span-2">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">Bahasa Pemrograman</span>
-                            <span id="resBahasa" class="font-bold text-amber-500"></span>
-                        </div>
-                        <div class="bg-[#111111] p-3.5 rounded-xl border border-neutral-800 sm:col-span-2">
-                            <span class="text-neutral-500 block text-[10px] uppercase font-bold mb-0.5">Alamat</span>
-                            <span id="resAlamat" class="font-bold text-white"></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
 
     </main>
 
-    <footer class="border-t border-neutral-800 py-6 text-center text-xs text-neutral-500">
-        <p>&copy; 2026 DevCraft Coding Academy. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="border-t border-pink-200 bg-white/60 py-8 text-center text-xs text-pink-400 font-bold mt-12">
+        <p>&copy; 2026 CodeCraft Academy . All Rights Reserved.</p>
     </footer>
 
-    <!-- Logic Dialog Confirm & Output -->
+    <!-- Script -->
     <script>
-        function handleSimpan(event) {
+        function handleFormSubmit(event) {
             event.preventDefault();
 
-            const checkboxes = document.querySelectorAll('input[name="bahasa"]:checked');
-            if (checkboxes.length === 0) {
-                alert("Harap pilih minimal 1 Bahasa Pemrograman!");
-                return;
-            }
+            const nik = document.getElementById('nik').value;
+            const nama = document.getElementById('nama').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const program = document.getElementById('program').value;
 
-            let konfirmasi = confirm("Apakah Anda sudah yakin untuk menyimpan?");
+            const konfirmasi = confirm("Apakah Anda yakin data pendaftaran yang diisi sudah benar?");
+            if (!konfirmasi) return;
 
-            if (konfirmasi) {
-                const nik = document.getElementById('nik').value;
-                const nama = document.getElementById('nama').value;
-                const gender = document.querySelector('input[name="jeniskelamin"]:checked').value;
-                const nohp = document.getElementById('nohp').value;
-                const alamat = document.getElementById('alamat').value;
+            const outputContent = document.getElementById('outputContent');
+            outputContent.innerHTML = `
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-medium">
+                    <div><strong class="text-pink-400 block text-xs uppercase">NIK:</strong> <span class="text-gray-700">${nik}</span></div>
+                    <div><strong class="text-pink-400 block text-xs uppercase">Nama Lengkap:</strong> <span class="text-gray-700">${nama}</span></div>
+                    <div><strong class="text-pink-400 block text-xs uppercase">Jenis Kelamin:</strong> <span class="text-gray-700">${gender}</span></div>
+                    <div><strong class="text-pink-400 block text-xs uppercase">No. WhatsApp:</strong> <span class="text-gray-700">${phone}</span></div>
+                    <div class="sm:col-span-2"><strong class="text-pink-400 block text-xs uppercase">Alamat Domisili:</strong> <span class="text-gray-700">${address}</span></div>
+                    <div class="sm:col-span-2"><strong class="text-pink-400 block text-xs uppercase">Program Pilihan:</strong> <span class="text-pink-600 font-bold">${program}</span></div>
+                </div>
+            `;
 
-                let selectedBahasa = [];
-                checkboxes.forEach((cb) => {
-                    selectedBahasa.push(cb.value);
-                });
-
-                document.getElementById('resNik').innerText = nik;
-                document.getElementById('resNama').innerText = nama;
-                document.getElementById('resGender').innerText = gender;
-                document.getElementById('resHp').innerText = nohp;
-                document.getElementById('resBahasa').innerText = selectedBahasa.join(', ');
-                document.getElementById('resAlamat').innerText = alamat;
-
-                const hasilSection = document.getElementById('hasilPendaftaran');
-                hasilSection.classList.remove('hidden');
-                hasilSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            document.getElementById('resultCard').classList.remove('hidden');
+            document.getElementById('resultCard').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 
